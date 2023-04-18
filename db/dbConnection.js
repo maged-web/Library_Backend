@@ -3,7 +3,7 @@ const connection = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "",
-    database: "library-backend",
+    database: "librarybackend",
     port: "3306"
 });
 connection.connect((err) => {

@@ -3,9 +3,10 @@ const util = require("util");
 
 const authorized = async (req, res, next) => {
     const query = util.promisify(conn.query).bind(conn);
-    const { tokens } = req.headerxs;
+    const { tokens } = req.headers;
     const user = await query("select * from users where tokens = ?", [tokens])
     if (user[0]) {
+        res.locals.user = user[0];
         next();
     }
     else {
