@@ -1,2 +1,2 @@
 # Library_Backend
-Library project
+Library system for reading books using node js 
